@@ -1,0 +1,186 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.cat {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    transition: .3s ease-in-out;
+}
+
+.cat-img {
+    width: 140px;
+    height: 200px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+}
+
+.cat-img:hover {
+    filter: blur(0.2px);
+}
+
+
+.cat-p {
+    text-transform: capitalize;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    height: fit-content;
+    font-size: 13px;
+    width: 140px;
+    position: absolute;
+    bottom: -15.5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    border: 0.5px solid transparent;
+    font-weight: bold;
+}
+
+.cat-p:hover {
+    border-top: 2px solid black;
+}
+
+.cat-span {
+    font-size: 7px;
+    right: 2px;
+    top: 2px;
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.cat-im {
+    font-size: 7px;
+    left: 2px;
+    top: 2px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.dog-imdb {
+    font-size: 8    px;
+}
+
+.dog-play {
+    width: 100%;
+    margin: auto;
+}
+
+.dog-play iframe {
+    width: 100%;
+}
+
+.dotted-loader {
+    width: 100px;
+    height: 100px;
+    border-width: 1.7px;
+    border-color: #DE3163;
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    animation: rotate-right 2s linear infinite;
+    z-index: 6;
+}
+
+.dotted-loader::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-width: 1.7px;
+    border-color: red;
+    border-style: solid dotted;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: rotate-left 1s linear infinite;
+    z-index: 6;
+}
+
+.wraper {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+}
+
+@keyframes rotate-right {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes rotate-left {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+
+@media screen and (min-width:375px) {
+    .cat-img {
+        width: 125px;
+        height: 200px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+
+    .cat-p {
+        width: 125px;
+    }
+
+    .dog-img {
+        width: 200px;
+        height: 280px;
+    }
+
+    .dog-play iframe {
+        height: 280px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .cat-img {
+        width: 125px;
+        height: 200px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+
+    .cat-p {
+        width: 125px;
+    }
+
+    .dog-img {
+        width: 200px;
+        height: 260px;
+    }
+    .dog-play iframe {
+        height: 500px;
+    }
+}
